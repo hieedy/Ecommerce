@@ -4,6 +4,7 @@ import com.codeWithSourabh.productService.models.Category;
 import lombok.Getter;
 import lombok.Setter;
 
+//this dto is used to get and return the response from the client. it's available to outside world. recall publish applicatin analogy by biswajeet.
 @Getter
 @Setter
 public class GenericProductDto {
@@ -11,6 +12,8 @@ public class GenericProductDto {
     private Long id;
     private String description;
     private String image;
+    private double price;
+    private String category;
 
     public GenericProductDto(String title, String description, String image, double price, String category, Long id) {
         this.id = id;
@@ -21,8 +24,7 @@ public class GenericProductDto {
         this.category = category;
     }
 
-    private double price;
-    private String category;
+
 
 //    public String getTitle() {
 //        return title;

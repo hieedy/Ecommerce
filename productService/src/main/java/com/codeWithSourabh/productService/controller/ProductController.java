@@ -9,6 +9,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @RestController()
 @RequestMapping("/products/")
 public class ProductController {
@@ -19,7 +21,7 @@ public class ProductController {
 
 
 
-//        dependancy injection by constructor -- recommended.
+//        dependency injection by constructor -- recommended.
         // no need to write autowired keyword here. in the latest spring version
         public ProductController(@Qualifier("fakeStoreProductService") ProductService productService){
                 this.productService = productService;
@@ -34,7 +36,8 @@ public class ProductController {
 //        }
 //
         @GetMapping
-        public void getAllProducts(){
+        public List<GenericProductDto> getAllProducts(){
+                return productService.getAllProducts();
 
         }
 
@@ -47,7 +50,9 @@ public class ProductController {
         }
 
         @DeleteMapping("{id}")
-        public void deleteProductById(){
+        public GenericProductDto deleteProductById(@PathVariable(value = "id") Long id){
+                System.out.println("You are in Deleting request PrducctController ");
+                return productService.deleteProductById(id);
 
         }
 
@@ -60,7 +65,10 @@ public class ProductController {
 
 
         @PutMapping("{id}")
-        public void updateProductById(){
+        public GenericProductDto updateProductById(@PathVariable(value = "id") Long id, @RequestBody GenericProductDto genericProductDto){
+                System.out.println("you are in update product service");
+                return productService.updateProductById(id, genericProductDto);
+
 
         }
 }

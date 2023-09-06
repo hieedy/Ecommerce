@@ -1,6 +1,7 @@
 package com.codeWithSourabh.productService.dtos;
 
 
+//This dto is used for handling response and sending request to FakeStore API.. so it's internal to our application.
 //dtos are used for interacting with third party.
 //should not model class while interacting with third party api
 public class FakeStoreProductDto {
