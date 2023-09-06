@@ -2,7 +2,7 @@ package com.codeWithSourabh.productService.service;
 
 import com.codeWithSourabh.productService.dtos.FakeStoreProductDto;
 import com.codeWithSourabh.productService.dtos.GenericProductDto;
-import com.codeWithSourabh.productService.models.Product;
+
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;

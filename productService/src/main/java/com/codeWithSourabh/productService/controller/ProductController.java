@@ -1,13 +1,13 @@
 package com.codeWithSourabh.productService.controller;
 
-import com.codeWithSourabh.productService.dtos.FakeStoreProductDto;
+
 import com.codeWithSourabh.productService.dtos.GenericProductDto;
 import com.codeWithSourabh.productService.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.web.client.RestTemplateBuilder;
+
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
+
 
 import java.util.List;
 

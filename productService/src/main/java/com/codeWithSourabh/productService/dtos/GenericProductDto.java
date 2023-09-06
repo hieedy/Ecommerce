@@ -1,6 +1,6 @@
 package com.codeWithSourabh.productService.dtos;
 
-import com.codeWithSourabh.productService.models.Category;
+
 import lombok.Getter;
 import lombok.Setter;
 
